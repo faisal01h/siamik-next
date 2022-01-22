@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react"
 import { Days, Months } from "../../../utils/kit";
 
-export default function() {
+export default function DetailReguler() {
 
     type ClassType = {
         name: string,

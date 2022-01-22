@@ -15,7 +15,7 @@ export default function Header() {
                             <img src={Logo.src} alt="" className="max-h-10" />
                             <div className="hidden lg:flex flex-col gap-0 text-sm">
                                 <p className="font-semibold">Sistem Informasi Akademik</p>
-                                <p className="text-xs">UPN "Veteran" Jawa Timur</p>
+                                <p className="text-xs">UPN &quot;Veteran&quot; Jawa Timur</p>
                             </div>
                         </a>
                     </Link>
