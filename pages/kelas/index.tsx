@@ -67,7 +67,7 @@ export default function Kelas() {
     return (
         <div className="flex flex-col gap-10">
             <Head>
-                <title>Kelas - Sistem Informasi Akademik UPN "Veteran" Jawa Timur</title>
+                <title>Kelas - Sistem Informasi Akademik UPN &quot;Veteran&quot; Jawa Timur</title>
             </Head>
             <div className="mx-8 md:mx-20 -mb-10 mt-5">
                 <AlertYellow icon={BsConeStriped} text="Maaf, untuk saat ini, halaman ini sedang dalam pengembangan pada sisi backend untuk scraping data." title="Fitur dalam pengembangan" />

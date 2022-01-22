@@ -75,7 +75,7 @@ export default function Landing() {
     return (
         <div>
             <Head>
-                <title>Beranda - Sistem Informasi Akademik UPN "Veteran" Jawa Timur</title>
+                <title>Beranda - Sistem Informasi Akademik UPN &quot;Veteran&quot; Jawa Timur</title>
             </Head>
             <div>
                 <div className={`mx-8 md:mx-12 md:px-8 py-7 mt-5 flex flex-col space-y-3 max-h-80 overflow-y-auto transition-all duration-300 ${showAlert ? "h-fit" : "h-0 invisible -my-12"}`}>

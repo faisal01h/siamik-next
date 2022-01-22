@@ -24,7 +24,7 @@ export default function() {
     return (
         <div>
             <Head>
-                <title>Daftar Kelas - Sistem Informasi Akademik UPN "Veteran" Jawa Timur</title>
+                <title>Daftar Kelas - Sistem Informasi Akademik UPN &quot;Veteran&quot; Jawa Timur</title>
             </Head>
             <div>
                 <div className="mx-8 md:mx-20 py-12">
