@@ -17,13 +17,15 @@ export default function DetailReguler() {
     const [ classInfo, setClassInfo ] = useState();
     const [ mahasiswa, setMahasiswa ] = useState([]);
     const [ searchQuery, setSearchQuery ] = useState('');
+    const [ noData, setNoData ] = useState(false);
 
     useEffect(() => {
         if(kelas && prodi && kode) {
             axios.get(`${process.env.NEXT_PUBLIC_API_HOST}/api/v1/kelas/reguler/detail?kelas=${kelas}&prodi=${prodi}&kode=${kode}`)
             .then((e) => {
-                console.log(e.data.payload)
-                setMahasiswa(e.data.payload)
+                if(e.data.payload.length > 0) {
+                    setMahasiswa(e.data.payload)
+                } else setNoData(true)
             })
         }
     }, [kelas, prodi, kode])
@@ -90,7 +92,7 @@ export default function DetailReguler() {
                                 )
                             }
                             
-                        }) : "Loading"
+                        }) : noData ? "Tidak ada data" :"Loading..."
                     }
                 </div>
             </div>

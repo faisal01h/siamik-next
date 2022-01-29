@@ -10,12 +10,16 @@ export default function Reguler() {
 
     const [ kelas, setKelas ] = useState([]);
     const [ searchQuery, setSearchQuery ] = useState('');
+    const [ noData, setNoData ] = useState(false);
 
     useEffect(() => {
         if(id) {
             axios.get(`${process.env.NEXT_PUBLIC_API_HOST}/api/v1/kelas/reguler?id=${id}`)
             .then((e) => {
-                setKelas(e.data.payload)
+                console.log("len", e.data.payload.length)
+                if(e.data.payload.length > 0) {
+                    setKelas(e.data.payload)
+                } else setNoData(true);
             })
             .catch(console.error)
         }
@@ -70,7 +74,7 @@ export default function Reguler() {
                                         </a>
                                     </Link>
                                 )
-                            }) : "Loading"
+                            }) : noData ? "Tidak ada data" : "Loading..."
                         }
 
                     </div>
